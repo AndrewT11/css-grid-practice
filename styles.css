@@ -1,0 +1,89 @@
+.grid-container {
+  display: grid;
+  /* column sizes. percentages, px, em, rem. fr is like flex-grow. Moves as screen adjusts size  */
+  grid-template-columns: 200px 250px;
+
+  /* repeat command allows you to repeat how many times you want to repeat the column, and the size  */
+  /* grid-template-columns: repeat(3, 100px); */
+
+  /* row size. percentages, px, em, rem. fr is like flex-grow. Grows or shrinks as screen size adjusts */
+  /* grid-template-rows: 200px; */
+
+  /* if you don't know how large your grid will be so you don't know how many rows there will be, use grid-auto-rows.
+determines the size of all rows added after the template rows */
+  /* grid-auto-rows: 150px; */
+
+  /* minmax defines the minimum and maximum size for content to be. This will allow for a minimum size and if content of container is more than container, the container will grow with content */
+  grid-auto-rows: minmax(150px, auto);
+
+  /* define the space between rows and columns  */
+  /* grid-column-gap: 20px;
+  grid-row-gap: 20px; */
+
+  /* grid gap will set both col and row gap to same amount */
+  grid-gap: 20px;
+
+  /* allows you to create different strings for the areas that you want your different code to take up  */
+  /* grid-template-areas:
+    "header header"
+    "sidebar content"
+    "sidebar content"; */
+
+  /* centers, start (left) or end (right) the grid on your screen horizontally  */
+  /* for both, other options: stretch, space-around, search css justify-content or align-items for more options */
+  /* justify-content: stretch; */
+
+  /* centers, start (left) or end (right) the grid on your screen vertically  */
+  /* align-content: stretch;
+  height: 100vh; */
+
+  /* change placement of items inside container. Justify is horrizontal again, align is vertical. Default is stretch  */
+  justify-items: stretch;
+  align-items: stretch;
+}
+
+.grid-item {
+  border: 1px solid black;
+  background-color: rgb(157, 157, 248);
+}
+
+.grid-item-1 {
+  /* grid-column-start and grid-column-end determines where the column starts and ends. 1 is the beginning column. the columns are divvyed by lines. So each line is the breaks. 2 cols means an ending of 3, etc. */
+  /* grid-column-start: 1;
+  grid-column-end: -1; */
+
+  /* shortcut is use grid-column instead and place both start/finish in the same css expression(?) */
+  /* grid-column: 1 / -1; */
+
+  /* placing span n in grid-column states to have the certain class/id span n columns */
+  /* grid-column: span 2; */
+
+  /* you can override justify and align properties that were previously called  by using -self */
+  align-self: start;
+  justify-self: center;
+}
+
+.grid-item-2 {
+  /* grid-row-start: 2;
+  grid-row-end: 4; */
+
+  /* you can also use span for grid-row  */
+  /* grid-row: span 2; */
+}
+
+.grid-item-3 {
+  /* grid-row-start: 2;
+  grid-row-end: 4; */
+
+  /* grid-row: span 3; */
+}
+
+.grid-item-4 {
+  /* grid-row-start: 2;
+  grid-row-end: 4; */
+}
+
+.grid-item-5 {
+  /* grid-row-start: 2;
+  grid-row-end: 4; */
+}
