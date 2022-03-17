@@ -48,7 +48,7 @@ determines the size of all rows added after the template rows */
 }
 
 .grid-item-1 {
-  /* grid-column-start and grid-column-end determines where the column starts and ends. 1 is the beginning column. the columns are divvyed by lines. So each line is the breaks. 2 cols means an ending of 3, etc. */
+  /* grid-column-start and grid-column-end determines where the column starts and ends. 1 is the beginning column. the columns are divvyed by lines. So each line is the breaks. 2 cols means an ending of 3, etc. End of column or row can be considered -1 */
   /* grid-column-start: 1;
   grid-column-end: -1; */
 
